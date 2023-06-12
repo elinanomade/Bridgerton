@@ -1,18 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=lato:400,700,300");
 
-body {
-	margin: 0;
-	font-family: "Milonga", cursive;
-	background-color: #e3dbd3;
+html {
+	background-color: #dbad84;
+	height: 100%;
+	line-height: 1.5;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	color: #fff;
 }
-* {
+
+html,
+body {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	min-height: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+/* * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-}
-.navbar {
+} */
+
+/* .navbar {
 	overflow: hidden;
 	background-color: #9cb2a5;
 	position: fixed;
@@ -63,124 +79,114 @@ body {
 		display: block;
 		text-align: left;
 	}
+} */
+
+.section {
+	min-height: 100vh;
 }
 
-#main {
-	display: flex;
+img {
+	max-width: 100%;
 }
 
-.content {
-	width: 90%;
-	color: #fff;
-	position: absolute;
-	bottom: 20px;
-	text-align: center;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 99;
-	font-size: 0.8em;
-	text-transform: uppercase;
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Abril Fatface",
+		sans-serif;
+	font-weight: 400;
+	letter-spacing: 1.5px;
 }
 
-.content p {
-	margin: 0.5em auto;
+h1 {
+	font-size: 9vw;
+	line-height: 1;
+	margin-top: 0;
 }
 
-.content span {
-	width: auto;
-	height: auto;
-	border: 1px solid #fff;
-	display: inline-block;
-	border-radius: 3px;
-	font-size: 0.9em;
-	vertical-align: text-top;
-	padding: 0px 10px;
+.contain {
+	margin: 0 10%;
 }
 
-.content a {
-	color: rgba(227, 227, 227, 0.78);
-	text-decoration: none;
-	border-bottom: 1px solid currentColor;
+.hero-text {
+	width: 80%;
+	float: left;
 }
 
-.content a:hover {
-	padding-bottom: 1px;
-}
-
-.buttons {
-	position: absolute;
-	right: 25px;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 99;
-}
-
-.buttons button {
-	border: none;
-	background-size: contain;
-	background: url(img/down-arrow.png)
-		no-repeat;
-	background-position: center;
-	width: 10px;
-	height: 30px;
-	display: block;
-	margin: 20px 0;
-	padding: 0 15px;
-	transition-duration: 0.6s;
-}
-
-.buttons button.next {
-	transform: scaleY(-1);
-}
-
-.buttons button.next:active {
-	transform: scaleY(-1) translateY(8px);
-}
-.buttons button.prev:active {
-	transform: translateY(8px);
-}
-
-#main .part {
-	flex: 1;
-}
-
-#main .part .section {
-	width: 100%;
-	height: 100vh;
+.cat {
+	font-size: 18px;
+	letter-spacing: 2px;
 	position: relative;
-	overflow: hidden;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 30px;
 }
 
-#main .part .section img {
-	width: 90vw;
-	height: 90vh;
-	object-fit: cover;
+.cat:after {
 	position: absolute;
-	left: var(--x);
-	pointer-events: none;
-}
-
-.cursor {
-	width: var(--size);
-	height: var(--size);
-	border-radius: 50%;
+	top: 50%;
+	left: 100%;
+	content: "";
+	width: 50px;
+	height: 1px;
 	background-color: #fff;
-	position: absolute;
-	z-index: 999;
-	pointer-events: none;
-	mix-blend-mode: difference;
+	margin-left: 5px;
 }
 
-.cursor-f {
-	width: var(--size);
-	height: var(--size);
+.cat.margin-bottom {
+	margin-bottom: 1rem;
+}
+
+.description {
+	letter-spacing: 1px;
+	width: 100%;
+	float: left;
+	margin-bottom: 1rem;
+}
+
+.description p {
+	font-family: "Lato", sans-serif;
+	font-size: 1.2rem;
+}
+
+#bg {
+	z-index: -1;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+}
+
+#bg img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	background-image: url("img/cursor_round.png");
-	background-size: cover;
-	mix-blend-mode: difference;
-	pointer-events: none;
-	opacity: 0.5;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	max-width: 900px;
+}
+
+.image-one {
+	width: 80%;
+	float: left;
+	margin-right: 50%;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 1280px) {
+	.description {
+		width: 50%;
+	}
+}
+
+@media (min-width: 600px) {
+	.hero-text {
+		width: 50%;
+	}
+	.image-one {
+		width: 100%;
+		padding-bottom: 20px;
+	}
 }
